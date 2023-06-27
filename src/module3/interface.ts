@@ -3,6 +3,10 @@ type User = {
   age: number;
 };
 
+type ExtendedUser = User & {
+  role: string;
+};
+
 interface IUser {
   name: string;
   age: number;
@@ -22,3 +26,14 @@ const user: IExtendUser = { name: "IExtendUser", age: 30, role: "IExtendUser" };
 //   name: "interface",
 //   age: 30,
 // };
+
+type AddNumbersType = (num1: number, num2: number) => number;
+interface IAddNumbersInterface {
+  (num1: number, num2: number): number;
+}
+
+type ArrayType = number[];
+
+interface IArrayType {
+  [index: number]: number;
+}
