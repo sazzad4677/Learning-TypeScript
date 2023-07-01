@@ -19,7 +19,7 @@ interface IMandatoryField {
 const createGenericConstrains = <T extends IMandatoryField>(param: T): T[] => {
   return [param];
 };
-const result2 = createGenericConstrains<MyInfoType>(myInfo);
+const result2 = createGenericConstrains<IMandatoryField>(myInfo);
 
 type PersonType = {
   name: "name";
